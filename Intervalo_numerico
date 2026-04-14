@@ -1,0 +1,27 @@
+import java.util.Scanner;
+
+public class Intervalo_numerico {
+    public static void main(String[] args) {
+        Scanner sm = new Scanner(System.in);
+        System.out.println("Deseja iniciar o programa?");
+        String okk = sm.next();
+        if (!okk.equals("sim")) {
+            System.out.println("Programa encerrado");
+        }
+        while (okk.equals("sim")) {
+            System.out.println("Digite seu numero");
+            int x = sm.nextInt();
+            String num = (x > 100 && x < 200) ? "Está dentro do intervalo numerico" :
+                    (x > 200) ? "O numero naão está no intervalo e é maior"
+                            : "O numero não está no intervalo e é menor ";
+            System.out.println(num);
+            System.out.println("Deseja continuar?");
+            okk = sm.next();
+
+            if ((!okk.equals("sim"))) {
+                System.out.println("Programa encerrado");
+
+            }
+        }
+    }
+}
