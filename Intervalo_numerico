@@ -12,7 +12,7 @@ public class Intervalo_numerico {
             System.out.println("Digite seu numero");
             int x = sm.nextInt();
             String num = (x > 100 && x < 200) ? "Está dentro do intervalo numerico" :
-                    (x > 200) ? "O numero naão está no intervalo e é maior"
+                    (x > 200) ? "O numero não está no intervalo e é maior"
                             : "O numero não está no intervalo e é menor ";
             System.out.println(num);
             System.out.println("Deseja continuar?");
