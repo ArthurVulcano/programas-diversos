@@ -1,0 +1,19 @@
+package liista_revisao;
+
+import java.util.Scanner;
+
+public class duracao_de_jogo {
+    public static void main(String[] args) {
+        Scanner sm = new Scanner(System.in);
+        System.out.println("Digite a hora de inicio do jogo");
+        int x = sm.nextInt();
+        System.out.println("Digite a hora de termino");
+        int x2 = sm.nextInt();
+         int dracao = (24 - x) + x2;
+        String j  = (x2 < x) ? "O jogo terminou no dia seguinte, a duração total foi: " + dracao
+                : "O jogo terminou no mesmo dia";
+        System.out.println(j);
+         sm.close();
+        }
+
+    }
