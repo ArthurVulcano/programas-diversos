@@ -1,0 +1,17 @@
+
+import java.util.Scanner;
+
+public class logica_par_impar_vs_magnitude {
+    public static void main(String[] args) {
+        Scanner sm = new Scanner(System.in);
+        System.out.println("Digite um numero");
+        int x = sm.nextInt();
+        String n = (x%2 == 0 && x < 100) ? "Seu numero é par e menor que 100" : (x%2 != 0 && x < 100) ?
+                "Seu numero é impar e menor que 100" : (x%2 == 0 && x > 100) ?
+                "Seu numero é par e maior que 100" : "Seu numero é impar e maior que 100";
+        System.out.println(n);
+
+
+    }
+    sm.close();
+}
