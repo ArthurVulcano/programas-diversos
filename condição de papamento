@@ -1,0 +1,35 @@
+package liista_revisao;
+
+import java.util.Scanner;
+
+public class condicoes_de_pagamento {
+    public static void main(String[] args) {
+        Scanner sm = new Scanner(System.in);
+        String ok;
+        System.out.println("Seja bem-vindo!!");
+        System.out.println("deseja começar o programa?");
+        ok = sm.next();
+        while (ok.equals("sim")) {
+            System.out.println("Digite o codigo do produto");
+             int cod = sm.nextInt();
+             while (cod > 3) {
+                 System.out.println("Digite o codigo novamente");
+                 cod = sm.nextInt();
+             }
+            System.out.println("Digite o preço do produto");
+            int x = sm.nextInt();
+            String op = (cod == 1) ?
+                    "Seu produto ira receber 10% de desconto por ter comprado a vista!...O preço final será" + ( x-(x*0.1))
+                    : (cod == 2) ? "Seu produto vai receber 5% de desconto por ter sido comprado no cartão!...O preço final será: " + (x-(x*0.05))
+                    : "mantenha o preço original!" + x;
+            System.out.println(op );
+            System.out.println("Deseja continuar a usar o programa?");
+            ok = sm.next();
+            if (!ok.equals("sim")){
+                System.out.println("programa encerrado");
+            }
+          sm.close();
+
+        }
+    }
+}
