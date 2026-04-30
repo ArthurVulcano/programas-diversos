@@ -1,0 +1,33 @@
+import java.util.Scanner;
+
+public class conjectura_de_collatz {
+    public static void main(String[] args) {
+        Scanner sm = new Scanner(System.in);
+        System.out.println("Ola! deseja iniciar o prorama?");
+
+        String l = sm.nextLine();
+        int cont = 0;
+
+        if (l.equalsIgnoreCase("Sim")) {
+            int i;
+            System.out.println("Digite um numero INTEIRO");
+            i = sm.nextInt();
+            do {
+
+                if (i % 2 == 0) {
+                    i /= 2;
+                } else  {
+                    i = (i * 3) + 1;
+                }
+                cont++;
+
+            } while (i != 1);
+
+            System.out.println("A quantodade de passos foram:" + cont);
+
+        } else {
+            System.out.println("programa não iniciado!, tchau ;)");
+        }
+        sm.close();
+    }
+}
