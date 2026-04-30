@@ -1,0 +1,34 @@
+import java.util.Scanner;
+
+public class sequencia_de_fibonacci_especifica {
+    public static void main(String[] args) {
+        Scanner sm = new Scanner(System.in);
+        int a = 0;
+        int at = 1;
+        int soma = 0;
+        int prox;
+        System.out.println("Ola! deseja começar o programa?");
+        String l = sm.next();
+        if (l.equalsIgnoreCase("Sim")) {
+            System.out.println("Esse programa mostra uma sequencia de fibonacci ESPECIFICA.");
+            System.out.println();
+            System.out.println("Os valores que entram são: "  + "3, 21, 987");
+            System.out.println();
+
+            do {
+                prox = at + a;
+                if (prox < 5000 && prox % 2 != 0 && prox % 3 == 0) {
+                    soma += prox;
+
+                }
+                a = at;
+                at = prox;
+            } while (prox < 5000);
+            System.out.println("A soma dos valores são de: " + soma);
+
+        }else {
+            System.out.println("O codigo não foi iniciado! Tchau ;)");
+        }
+        sm.close();
+    }
+}
