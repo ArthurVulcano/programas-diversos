@@ -1,0 +1,31 @@
+import java.util.Scanner;
+public class calculadora_de_faturas_de_agua {
+    public static double calconta(double consumo) {
+        if (consumo <= 15) return 35.00;
+        else if (consumo <= 30) {
+            return 35.00 + (consumo - 15) * 4.50;
+
+        }
+        else {
+            return 35.00 + (consumo - 30) * 7.00;
+        }
+    }
+    public static void main(String[] args){
+        Scanner sm = new Scanner(System.in);
+        System.out.println("Olá, deseja começar o porgrama? ;)");
+        String l = sm.nextLine();
+        if (l.equalsIgnoreCase("Sim")){
+            System.out.println("Esse programa lê seu numero em METROS CUBICOS.");
+            do {
+                System.out.println("Digite seu consumo!");
+                double consumo = sm.nextDouble();
+                if (consumo == 0) break;
+                double valor = calconta(consumo);
+                System.out.printf("o valor que você deverá pagar: R$ %.2f\n ", valor);
+
+            }while (true);
+            System.out.println("Programa encerrado, Tchau ;(");
+        }else System.out.println("Programa não iniciado. tchau ;(");
+        sm.close();
+    }
+}
